@@ -1,1 +1,110 @@
+<body>
+<p>
+<b> This text will be bolded. </b>
+</p>
+<p>
+<i> This text will be italic. </i>
+</p>
+<p>
+<ins> This text will be underlined</ins>
+</p>
+<mark> This text will be highlighted </mark>
+<p>
+This is normal text<sup> This will be super scripted </sup> This is normal
+again
+</p>
+<p>This is normal text <sub> This text will be subscripted </sub></p>
+<p>Normal Text <small> Smal Text </small></p>
+<p><del> This text will be deleted</del></p>
+</body>
+//question 2
+<body>
+<h1>Navigate Me:</h1>
+<p>
+Take me to
+<a href="https://pwskills.com/" target="_blank">PW Skills</a> to buy a
+course.
+</p>
+<p>
+Take me to
+<a href="https://developer.mozilla.org/en-US/" target="_blank"
+>MDN docs</a
+>
+to know more about Web Development.
+</p>
+<p>
+Take me to
+<a href="https://lab.pwskills.com/" target="_blank">PW Skills Lab</a> to
+practice live coding.
+</p>
+</body>
+
+q3.
+<title>Web Design</title>
+</head>
+<body>
+<div>
+<a href="./home.html">Home</a> |
+<a href="./webDevelopment.html">Web Development</a> |
+<a href="./webDesign.html">Web Design</a>
+</div>
+<div>
+<h1>Web Design.</h1>
+<p>
+Web design refers to the process of designing the visual appearance and
+layout of websites. It involves creating a visual concept, planning the
+layout of web pages, selecting color schemes, and choosing typography
+and images.
+<br />
+Web designers use various tools and technologies to create visually
+appealing and user-friendly websites. These tools include graphic design
+software such as Adobe Photoshop, Adobe Illustrator, Sketch, and Figma.
+They also use programming languages like HTML, CSS, and JavaScript to
+bring their designs to life on the web.
+</p>
+</div>
+</body>
+q4.
+<title>Web Development</title>
+</head>
+<body>
+<div>
+<a href="./home.html">Home</a> |
+<a href="./webDevelopment.html">Web Development</a> |
+<a href="./webDesign.html">Web Design</a>
+</div>
+<div>
+<h1>Web Development</h1>
+<p>
+Web development refers to the process of creating websites and web applications. This
+involves a combination of different technologies and programming languages, such as HTML,
+CSS, and JavaScript, to create web
+pages and make them interactive.
+<br />
+Web development can be divided into two main categories: front-end development and
+back-end development. Front-end development deals with the visual aspects of a website or
+application, including the design, layout, and user interface. This involves working with
+HTML, CSS, and JavaScript to create web pages that can be viewed in a browser.
+</p>
+</div>
+</body>
+
+q5.
+<body>
+<h1>Full Stack Web Development Tech Stack:</h1>
+<dl>
+<dt>HTML</dt>
+<dd>
+HyperText Markup Language is the standard markup language for creating
+web pages and other online documents.
+</dd>
+<dt>CSS</dt>
+<dd>
+Cascading Style Sheets is a style sheet language used for describing the
+presentation of a document written in HTML or XML.
+</dd>
+<dt>JavaScript</dt>
+<dd>
+
+
 
