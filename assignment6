@@ -1,1 +1,136 @@
+//question3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form with Custom Colors and Opacity</title>
+    <style>
+        /* Basic page setup */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        /* Form container styling */
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        /* Form header styling */
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input fields styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Focus effect for input fields */
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            background-color: #e9ffe9;
+        }
+
+        /* Custom color palette for form elements */
+        .input-text {
+            background-color: #e0f7fa; /* Light Cyan */
+        }
+        
+        .input-email {
+            background-color: #ffe0b2; /* Light Orange */
+        }
+
+        .input-password {
+            background-color: #f8bbd0; /* Light Pink */
+        }
+
+        textarea {
+            background-color: #dcedc8; /* Light Green */
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Button styling */
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Section with opacity */
+        .opaque-section {
+            opacity: 0.8; /* Apply opacity to this section */
+            background-color: #ffccbc; /* Light Coral */
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Contact Us</h2>
+
+        <!-- Form starts here -->
+        <form action="#" method="post">
+
+            <!-- Name field -->
+            <input class="input-text" type="text" placeholder="Your Name" required><br>
+
+            <!-- Email field -->
+            <input class="input-email" type="email" placeholder="Your Email" required><br>
+
+            <!-- Password field -->
+            <input class="input-password" type="password" placeholder="Your Password" required><br>
+
+            <!-- Message field (textarea) -->
+            <textarea placeholder="Your Message" required></textarea><br>
+
+            <!-- Submit button -->
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
+
+        <!-- Section with opacity -->
+        <div class="opaque-section">
+            <p>This section has reduced opacity (80%) for a subtle background effect.</p>
+        </div>
+    </div>
+
+</body>
+</html>
