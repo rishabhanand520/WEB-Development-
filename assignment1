@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="resume">
+    <header>
+      <div class="name">
+        <h1>John Doe</h1>
+        <p>Web Developer</p>
+      </div>
+      <div class="contact-info">
+        <p>Email: john.doe@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>LinkedIn: linkedin.com/in/johndoe</p>
+      </div>
+    </header>
+
+    <section class="summary">
+      <h2>Professional Summary</h2>
+      <p>A passionate web developer with experience in creating dynamic and responsive websites. Proficient in HTML, CSS, JavaScript, and modern web frameworks. Eager to learn new technologies and contribute to innovative projects.</p>
+    </section>
+
+    <section class="experience">
+      <h2>Work Experience</h2>
+      <div class="job">
+        <h3>Front-End Developer at ABC Tech</h3>
+        <p><em>March 2020 - Present</em></p>
+        <ul>
+          <li>Developed responsive web applications using HTML, CSS, and JavaScript.</li>
+          <li>Collaborated with the design team to implement user-friendly interfaces.</li>
+          <li>Optimized website performance and fixed bugs for better user experience.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Web Developer Intern at XYZ Inc.</h3>
+        <p><em>June 2019 - February 2020</em></p>
+        <ul>
+          <li>Assisted in building and testing web pages using HTML and CSS.</li>
+          <li>Worked on integrating front-end with back-end APIs.</li>
+          <li>Participated in weekly code reviews and learned best practices in development.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <div class="degree">
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p>University of XYZ</p>
+        <p><em>Graduated: 2019</em></p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Node.js</li>
+        <li>Git, GitHub</li>
+        <li>Responsive Design</li>
+        <li>Problem Solving</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
