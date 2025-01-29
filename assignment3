@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/250" alt="Image 1">
+        <img src="https://via.placeholder.com/250" alt="Image 2">
+        <img src="https://via.placeholder.com/250" alt="Image 3">
+        <img src="https://via.placeholder.com/250" alt="Image 4">
+        <img src="https://via.placeholder.com/250" alt="Image 5">
+        <img src="https://via.placeholder.com/250" alt=
+
+
+
+
+//question 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video and Audio Player</title>
+</head>
+<body>
+    <h1>Media Playback Example</h1>
+
+    <!-- Video Section -->
+    <h2>Video Player</h2>
+    <video width="600" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio Section -->
+    <h2>Audio Player</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>
+question 3.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Playing Video and Audio</title>
+</head>
+<body>
+    <h1>Auto-Playing & Looping Media</h1>
+
+    <!-- Video Section -->
+    <h2>Video Player (Auto & Loop)</h2>
+    <video width="600" autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio Section -->
+    <h2>Audio Player (Auto & Loop)</h2>
+    <audio autoplay loop>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>
+question4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Wikipedia Page</title>
+</head>
+<body>
+    <h1>PhysicsWallah Wikipedia Page</h1>
+
+    <!-- Embedding Wikipedia Page using iframe -->
+    <iframe src="https://en.wikipedia.org/wiki/Physics_Wallah" width="800" height="600" style="border: 1px solid #ccc;">
+        Your browser does not support iframes.
+    </iframe>
+</body>
+</html>
+question5.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+            text-align: left;
+            display: block;
+        }
+        .terms {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .terms input {
+            width: auto;
+            margin-right: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sign-Up Form -->
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label>First Name:</label>
+            <input type="text" id="firstName" required>
+
+            <label>Last Name:</label>
+            <input type="text" id="lastName" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" required>
+
+            <label>Password:</label>
+            <input type="password" id="password" required>
+
+            <label>Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+
+            <label>Age:</label>
+            <input type="number" id="age" required>
+
+            <label>Gender:</label>
+            <select id="gender">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <div class="terms">
+                <input type="checkbox" id="terms"> <span>I agree to the terms & conditions</span>
+            </div>
+
+            <button type="submit">Sign Up</button>
+            <p class="error" id="signupError"></p>
+        </form>
+    </div>
+
+    <!-- Sign-In Form -->
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="signinForm">
+            <label>Email:</label>
+            <input type="email" id="signinEmail" required>
+
+            <label>Password:</label>
+            <input type="password" id="signinPassword" required>
+
+            <button type="submit">Sign In</button>
+            <p class="error" id="signinError"></p>
+        </form>
+    </div>
+
+    <script>
+        // Sign-Up Form Validation
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let firstName = document.getElementById("firstName").value.trim();
+            let lastName = document.getElementById("lastName").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let age = document.getElementById("age").value;
+            let gender = document.getElementById("gender").value;
+            let terms = document.getElementById("terms").checked;
+            let errorMsg = document.getElementById("signupError");
+
+            errorMsg.innerHTML = "";
+
+            if (password.length < 6) {
+                errorMsg.innerHTML = "Password must be at least 6 characters long.";
+                return;
+            }
+            if (password !== confirmPassword) {
+                errorMsg.innerHTML = "Passwords do not match.";
+                return;
+            }
+            if (age < 18) {
+                errorMsg.innerHTML = "You must be at least 18 years old.";
+                return;
+            }
+            if (gender === "") {
+                errorMsg.innerHTML = "Please select your gender.";
+                return;
+            }
+            if (!terms) {
+                errorMsg.innerHTML = "You must agree to the terms and conditions.";
+                return;
+            }
+
+            alert("Sign Up Successful!");
+            document.getElementById("signupForm").reset();
+        });
+
+        // Sign-In Form Validation
+        document.getElementById("signinForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("signinEmail").value.trim();
+            let password = document.getElementById("signinPassword").value;
+            let errorMsg = document.getElementById("signinError");
+
+            errorMsg.innerHTML = "";
+
+            if (email === "" || password === "") {
+                errorMsg.innerHTML = "All fields are required.";
+                return;
+            }
+
+            alert("Sign In Successful!");
+            document.getElementById("signinForm").reset();
+        });
+    </script>
+
+</body>
+</html>
 
