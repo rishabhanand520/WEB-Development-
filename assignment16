@@ -1,1 +1,386 @@
+//question 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+  <div class="gallery">
+    <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Image 1"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Image 2"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Image 3"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Image 4"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Image 5"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Image 6"></div>
+  </div>
+
+</body>
+</html>
+//stlr.css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//question2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Container Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="box box-a">A</div>
+    <div class="box box-b">B</div>
+    <div class="box box-c">C</div>
+    <div class="box box-d">D</div>
+  </div>
+
+</body>
+</html>
+//syyle.css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  width: 300px;
+}
+
+.box {
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 8px;
+  font-size: 24px;
+}
+
+.box-a {
+  grid-column: 1 / 3;  /* Spans across two columns */
+}
+
+.box-b {
+  grid-column: 1;
+}
+
+.box-c {
+  grid-column: 2;
+}
+
+.box-d {
+  grid-column: 1 / 3; /* Spans across two columns */
+}
+
+//question3
+
+n CSS Grid Layout, the properties grid-auto-rows and grid-auto-columns are used to control the sizing of grid items that
+are placed outside the explicitly defined rows or columns.
+
+grid-auto-rows: This property defines the size of implicitly created rows. These rows are created when items are placed
+outside the defined grid container's explicit grid area.
+
+grid-auto-columns: This property defines the size of implicitly created columns, similar to grid-auto-rows, but for
+columns.
+
+Example: grid-auto-rows and grid-auto-columns
+Let’s consider a grid where we define a grid with explicit rows and columns, but we also have items that span beyond the 
+defined areas, and we use grid-auto-rows and grid-auto-columns to control the size of those implicit rows/columns.
+
+HTML:
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Auto Rows and Columns Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+  </div>
+</body>
+</html>
+CSS (styles.css):
+css
+Copy
+Edit
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 columns, each 100px wide */
+  grid-template-rows: 100px 100px; /* 2 rows, each 100px tall */
+  grid-gap: 10px;
+  grid-auto-rows: 150px; /* Implicit rows will have height of 150px */
+  grid-auto-columns: 150px; /* Implicit columns will have width of 150px */
+}
+
+.grid-container div {
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.item1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.item3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.item5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.item6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.item7 {
+  grid-column: 1;
+  grid-row: 3; /* Placed in the third row, implicitly created */
+}
+Explanation:
+grid-template-columns and grid-template-rows: We define the grid with 3 columns, each 100px wide, and 2 rows, each 
+100px tall.
+
+grid-auto-rows: 150px: This defines that any implicitly created rows (rows that don’t have a specified position) will 
+have a height of 150px. The item7 is placed in this implicit row (the 3rd row), so it will have a height of 150px.
+
+grid-auto-columns: 150px: This defines that any implicitly created columns (columns that don’t have a specified position
+will have a width of 150px. If any items were to be placed outside the defined 3 columns, those columns would be 150px wide.
+
+grid-gap: 10px: This adds space between the grid items.
+
+//question4
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Container styling */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* 4 columns of 100px each */
+  grid-gap: 10px; /* 10px space between the grid items */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box styling */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.box1 {
+  background-color: #ff5722; /* Example of custom color for box 1 */
+}
+
+.box2 {
+  background-color: #9c27b0; /* Example of custom color for box 2 */
+}
+
+.box3 {
+  background-color: #2196f3; /* Example of custom color for box 3 */
+}
+
+.box4 {
+  background-color: #ffeb3b; /* Example of custom color for box 4 */
+}
+
+.box5 {
+  background-color: #673ab7; /* Example of custom color for box 5 */
+}
+
+.box6 {
+  background-color: #8bc34a; /* Example of custom color for box 6 */
+}
+
+.box7 {
+  background-color: #00bcd4; /* Example of custom color for box 7 */
+}
+
+.box8 {
+  background-color: #e91e63; /* Example of custom color for box 8 */
+}
+
+
+//question4
+n CSS, both justify-items and justify-self are used for alignment within grid containers. However, they serve different
+purposes.
+
+1. justify-items
+Definition: The justify-items property is used to align all grid items along the inline (horizontal) axis
+(i.e., the main axis for left-to-right or right-to-left languages).
+Applies To: It applies to the grid container and affects the alignment of all items within the grid.
+2. justify-self
+Definition: The justify-self property is used to align a specific grid item within its own grid cell along the inline 
+(horizontal) axis. It allows you to override the alignment defined by justify-items for a particular item.
+Applies To: It applies to individual grid items.
+Example Code:
+HTML:
+html
+Copy
+Edit
+<div class="container">
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+  <div class="box box3">3</div>
+  <div class="box box4">4</div>
+</div>
+CSS:
+css
+Copy
+Edit
+/* Basic styling and grid setup */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px); /* 2 columns of 150px */
+  grid-gap: 10px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: #f0f0f0;
+  justify-items: center; /* Align all grid items to the center horizontally */
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 24px;
+}
+
+/* Overriding justify-self for specific grid item */
+.box2 {
+  justify-self: end; /* Align this item to the end of its grid cell horizontally */
+}
+
+.box4 {
+  justify-self: start; /* Align this item to the start of its grid cell horizontally */
+}
+Explanation:
+Using justify-items on the .container:
+
+justify-items: center; aligns all grid items horizontally to the center of their respective grid cells. This alignment is
+applied to all the grid items (i.e., .box1, .box2, .box3, and .box4).
+Using justify-self on individual .box items:
+
+The justify-self: end; applied to .box2 overrides the container's justify-items: center; and aligns the second box (.box2)
+to the end of its grid cell horizontally.
+The justify-self: start; applied to .box4 overrides the alignment for .box4, placing it at the start of its grid cell
+horizontally.
