@@ -1,1 +1,234 @@
 
+//question1
+
+What are conditional statements? Explain conditional statements with syntax and examples.
+if statement
+if...else statement
+else if statement
+switch statement
+let age = 18;
+
+if (age >= 18) {
+    console.log("You are an adult.");
+}
+let age = 16;
+
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+if (condition1) {
+    // Code to be executed if condition1 is true
+} else if (condition2) {
+    // Code to be executed if condition2 is true
+} else {
+    // Code to be executed if none of the above conditions are true
+}
+let age = 22;
+
+if (age < 13) {
+    console.log("You are a child.");
+} else if (age >= 13 && age <= 19) {
+    console.log("You are a teenager.");
+} else {
+    console.log("You are an adult.");
+}
+switch (expression) {
+    case value1:
+        // Code to be executed if the expression equals value1
+        break;
+    case value2:
+        // Code to be executed if the expression equals value2
+        break;
+    default:
+        // Code to be executed if none of the cases match
+}
+
+//question2
+
+
+// Function to determine the grade based on marks
+function gradeStudent(marks) {
+    if (marks > 90) {
+        console.log("Grade: A");
+    } else if (marks >= 70 && marks <= 90) {
+        console.log("Grade: B");
+    } else if (marks >= 50 && marks < 70) {
+        console.log("Grade: C");
+    } else {
+        console.log("Grade: F");
+    }
+}
+
+// Example usage
+let studentMarks = 85;  // You can change this value to test other marks
+gradeStudent(studentMarks);
+
+//question3
+
+Loops in programming are constructs that allow you to execute a block of code repeatedly based on a specified condition.
+Loops are used to automate repetitive tasks and to iterate over a collection of items such as arrays or objects. They help
+in reducing code duplication, improving efficiency, and making the code more concise.
+
+For example, instead of manually writing the same code multiple times, you can use a loop to execute that code as many
+times as needed.
+
+Types of Loops in JavaScript
+JavaScript provides several types of loops to suit different needs:
+
+for loop
+while loop
+do...while loop
+for...in loop (for objects)
+for...of loop (for iterables like arrays)
+Let’s go through each one with their syntax and examples.
+
+1. for Loop
+The for loop is used when you know beforehand how many times you need to execute a statement or a block of statements. It consists of three parts:
+
+Initialization: Setting the loop counter.
+Condition: The loop runs while this condition is true.
+Increment/Decrement: Updating the loop counter after each iteration.
+Syntax:
+javascript
+Copy
+Edit
+for (initialization; condition; increment/decrement) {
+    // Code to be executed
+}
+Example:
+javascript
+Copy
+Edit
+// Loop from 1 to 5
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+Output:
+
+Copy
+Edit
+1
+2
+3
+4
+5
+In this example, the loop runs 5 times. The variable i starts at 1 and increments by 1 each time until it reaches 5.
+
+2. while Loop
+The while loop is used when you want to loop through a block of code while a specific condition is true. The condition is
+checked before each iteration, and the loop will continue executing as long as the condition evaluates to true.
+
+Syntax:
+javascript
+Copy
+Edit
+while (condition) {
+    // Code to be executed
+}
+Example:
+javascript
+Copy
+Edit
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+Output:
+
+Copy
+Edit
+1
+2
+3
+4
+5
+In this example, the loop continues as long as i <= 5. The value of i is incremented within the loop.
+
+3. do...while Loop
+The do...while loop is similar to the while loop, but with a key difference: the condition is checked after each 
+iteration. This means that the loop will always execute at least once, regardless of whether the condition is true or not.
+
+Syntax:
+javascript
+Copy
+Edit
+do {
+    // Code to be executed
+} while (condition);
+Example:
+javascript
+Copy
+Edit
+let i = 1;
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+Output:
+
+Copy
+Edit
+1
+2
+3
+4
+5
+In this example, the loop works the same as the while loop, but the condition is checked after the block of code runs.
+
+4. for...in Loop
+The for...in loop is used to loop through the properties of an object. It allows you to access the keys of an object.
+
+Syntax:
+javascript
+Copy
+Edit
+for (let key in object) {
+    // Code to be executed for each key
+}
+Example:
+javascript
+Copy
+Edit
+let person = { name: "Alice", age: 25, city: "New York" };
+
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+Output:
+
+vbnet
+Copy
+Edit
+name: Alice
+age: 25
+city: New York
+
+//question4
+
+const num1 = 10;
+const num2 = 25;
+
+// Loop from num1 + 1 to num2
+for (let i = num1 + 1; i <= num2; i++) {
+    console.log(i);
+}
+
+//question5
+let i = 1;  // Initialize counter variable
+
+// Ascending order using while loop
+while (i <= 25) {
+    console.log(i);
+    i++;  // Increment the counter
+}
+let i = 25;  // Initialize counter variable
+
+// Descending order using while loop
+while (i >= 1) {
+    console.log(i);
+    i--;  // Decrement the counter
+}
+
