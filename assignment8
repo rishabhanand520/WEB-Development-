@@ -1,1 +1,295 @@
+In JavaScript, operators are symbols or keywords that perform operations on values or variables. They are an essential part of the language because they allow developers to manipulate data, compare values, perform calculations, and control the flow of execution. Operators are used to carry out a wide range of tasks, such as arithmetic, logical comparisons, and assignment, among others.
 
+Types of Operators in JavaScript:
+Arithmetic Operators:
+
+Used for performing basic mathematical operations.
+Examples:
++ (Addition)
+- (Subtraction)
+* (Multiplication)
+/ (Division)
+% (Modulus, returns the remainder of division)
+++ (Increment, increases a variable’s value by 1)
+-- (Decrement, decreases a variable’s value by 1)
+javascript
+Copy
+Edit
+//question2
+. Arithmetic Operators
+Arithmetic operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division.
+
+Examples:
++ (Addition)
+- (Subtraction)
+* (Multiplication)
+/ (Division)
+% (Modulus - returns the remainder of a division)
+++ (Increment - increases a number by 1)
+-- (Decrement - decreases a number by 1)
+javascript
+Copy
+Edit
+let a = 10;
+let b = 5;
+
+console.log(a + b);  // Output: 15 (Addition)
+console.log(a - b);  // Output: 5  (Subtraction)
+console.log(a * b);  // Output: 50 (Multiplication)
+console.log(a / b);  // Output: 2  (Division)
+console.log(a % b);  // Output: 0  (Modulus)
+a++;                 // Increment a by 1
+console.log(a);      // Output: 11
+2. Assignment Operators
+Assignment operators are used to assign values to variables. They are essential for variable initialization and updating.
+
+Examples:
+= (Simple assignment)
++= (Addition assignment)
+-= (Subtraction assignment)
+*= (Multiplication assignment)
+/= (Division assignment)
+%= (Modulus assignment)
+javascript
+Copy
+Edit
+let x = 10;   // Simple assignment
+x += 5;        // Equivalent to x = x + 5
+console.log(x); // Output: 15
+
+x *= 2;        // Equivalent to x = x * 2
+console.log(x); // Output: 30
+3. Comparison Operators
+Comparison operators are used to compare two values. They return a boolean (true or false) based on the comparison.
+
+Examples:
+== (Equal to)
+=== (Strict equal to - compares both value and type)
+!= (Not equal to)
+!== (Strict not equal to)
+> (Greater than)
+< (Less than)
+>= (Greater than or equal to)
+<= (Less than or equal to)
+javascript
+Copy
+Edit
+let x = 10;
+let y = 20;
+
+console.log(x == y);   // Output: false (Equal to)
+console.log(x !== y);  // Output: true  (Strict not equal to)
+console.log(x < y);    // Output: true  (Less than)
+console.log(x >= y);   // Output: false (Greater than or equal to)
+4. Logical Operators
+Logical operators are used to combine multiple conditions or expressions and return a boolean result. They are commonly used in control flow (e.g., if, while).
+
+Examples:
+&& (Logical AND)
+|| (Logical OR)
+! (Logical NOT)
+javascript
+Copy
+Edit
+let a = true;
+let b = false;
+
+console.log(a && b);  // Output: false (AND operator)
+console.log(a || b);  // Output: true  (OR operator)
+console.log(!a);      // Output: false (NOT operator)
+5. Conditional (Ternary) Operator
+The ternary operator is a shorthand for if-else statements. It takes a condition, a value if true, and a value if false.
+
+Syntax:
+javascript
+Copy
+Edit
+condition ? value_if_true : value_if_false;
+Example:
+javascript
+Copy
+Edit
+let age = 18;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result); // Output: "Adult"
+6. Type Operators
+Type operators are used to check or return the type of a variable or check if an object is an instance of a certain class or constructor.
+
+Examples:
+typeof (Returns the type of a variable)
+instanceof (Checks if an object is an instance of a specified class)
+javascript
+Copy
+Edit
+let num = 10;
+console.log(typeof num);  // Output: "number"
+
+let arr = [];
+console.log(arr instanceof Array);  // Output: true
+7. Bitwise Operators
+Bitwise operators perform operations on binary representations of integers. These are low-level operators that work with bits and are often used in performance-critical applications.
+
+Examples:
+& (AND)
+| (OR)
+^ (XOR)
+~ (NOT)
+<< (Left shift)
+>> (Right shift)
+javascript
+Copy
+Edit
+let a = 5;  // 0101 in binary
+let b = 3;  // 0011 in binary
+
+console.log(a & b);  // Output: 1 (AND operation)
+console.log(a | b);  // Output: 7 (OR operation)
+console.log(a << 1); // Output: 10 (Left shift)
+8. Unary Operators
+Unary operators operate on a single operand and perform operations like negation, increment, or type conversion.
+
+Examples:
++ (Unary plus, converts a value to a number)
+- (Unary negation, negates a value)
+++ (Increment)
+-- (Decrement)
+typeof (Returns the type of a variable)
+delete (Deletes a property from an object)
+javascript
+Copy
+Edit
+let a = 5;
+console.log(+a);    // Output: 5 (Unary plus, no effect here)
+console.log(-a);    // Output: -5 (Unary negation)
+a++;
+console.log(a);     // Output: 6 (Increment)
+9. Spread and Rest Operators
+The spread (...) and rest (...) operators are used for array and object manipulation. The spread operator unpacks values, while the rest operator collects values.
+
+Examples:
+Spread: Used to unpack elements or properties.
+Rest: Used to collect function arguments or array elements.
+javascript
+Copy
+Edit
+// Spread example
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5]; 
+console.log(arr2);  // Output: [1, 2, 3, 4, 5]
+
+// Rest example in function parameters
+function sum(...args) {
+  return args.reduce((acc, val) => acc + val, 0);
+}
+console.log(sum(1, 2, 3, 4));  // Output: 10
+10. Nullish Coalescing Operator (??)
+The nullish coalescing operator returns the right-hand operand when the left-hand operand is null or undefined. This is useful when checking for default values.
+//question3
+
+Operator Type	Operands	Description	Example
+Unary	1	Operates on a single operand.	++a, -a, typeof x
+Binary	2	Operates on two operands.	x + y, x * y, x === y
+Ternary	3	Conditional operator, works with three operands.	age >= 18 ? "Adult" : "Minor"
+
+//question4
+
+Operator Precedence
+Operator precedence defines the order in which operators are applied in an expression. Operators with higher
+precedence are evaluated before those with lower precedence.
+
+Key Points:
+Higher precedence operators are evaluated first.
+Lower precedence operators are evaluated last.
+If multiple operators have the same precedence, associativity determines the order.
+Precedence Example:
+In the following expression, the multiplication operator * has higher precedence than the addition operator +,
+so it is evaluated first.
+
+javascript
+Copy
+Edit
+let result = 5 + 2 * 3;
+console.log(result); // Output: 11 (2 * 3 = 6, then 5 + 6 = 11)
+In this case, multiplication (*) takes precedence over addition (+), so the result is 11.
+
+2. Operator Associativity
+Associativity determines the direction in which operators of the same precedence are evaluated. There are two types
+of associativity:
+
+a. Left-to-Right Associativity (LTR)
+Most operators in JavaScript, such as arithmetic and comparison operators, have left-to-right associativity. This means
+that operators are evaluated from left to right.
+
+Example:
+javascript
+Copy
+Edit
+let result = 10 - 5 - 2;
+console.log(result); // Output: 3 (10 - 5 = 5, then 5 - 2 = 3)
+Here, subtraction (-) is evaluated from left to right.
+
+b. Right-to-Left Associativity (RTL)
+Some operators, such as the assignment (=) operator, have right-to-left associativity. This means that expressions are 
+evaluated from right to left.
+
+Example:
+javascript
+Copy
+Edit
+let a, b, c;
+a = b = c = 10;
+console.log(a, b, c); // Output: 10 10 10
+In this case, = has right-to-left associativity, so c = 10 is evaluated first, then b = c, and finally a = b.
+//question5
+// Function to calculate simple interest
+function calculateSimpleInterest(principal, rate, time) {
+    // Simple Interest Formula: (P * R * T) / 100
+    let simpleInterest = (principal * rate * time) / 100;
+    return simpleInterest;
+}
+
+// Example usage
+let principal = 1000;  // Initial amount (Principal)
+let rate = 5;          // Annual interest rate in percentage
+let time = 3;          // Time period in years
+
+// Calculate simple interest
+let interest = calculateSimpleInterest(principal, rate, time);
+
+// Output the result
+console.log(`The simple interest is: $${interest}`);
+//question5
+// Function to calculate BMI
+function calculateBMI(weight, height) {
+    // BMI Formula: weight / (height * height)
+    let bmi = weight / (height * height);
+    return bmi;
+}
+
+// Example usage
+let weight = 70;  // Weight in kilograms
+let height = 1.75;  // Height in meters
+
+// Calculate BMI
+let bmi = calculateBMI(weight, height);
+
+// Output the result
+console.log(`Your BMI is: ${bmi.toFixed(2)}`);
+
+//question6
+// Function to calculate the area of a circle
+function calculateAreaOfCircle(radius) {
+    // Formula: Area = π * r^2
+    const pi = 3.14159;
+    let area = pi * radius * radius;
+    return area;
+}
+
+// Given radius
+let radius = 10;
+
+// Calculate area of the circle
+let area = calculateAreaOfCircle(radius);
+
+// Output the result
+console.log(`The area of the circle with radius ${radius} is: ${area.toFixed(2)} square units.`);
