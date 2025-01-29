@@ -1,1 +1,164 @@
+//question1
+// Initial shopping cart
+let shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+// Function to check if an item is already in the cart
+function isItemInCart(item) {
+    return shoppingCart.includes(item);
+}
+
+// 1. Add 'Meat' to the beginning if not already present
+if (!isItemInCart('Meat')) {
+    shoppingCart.unshift('Meat');
+}
+
+// 2. Add 'Sugar' to the end if not already present
+if (!isItemInCart('Sugar')) {
+    shoppingCart.push('Sugar');
+}
+
+// 3. Remove 'Honey' if you are allergic
+const honeyIndex = shoppingCart.indexOf('Honey');
+if (honeyIndex !== -1) {
+    shoppingCart.splice(honeyIndex, 1);
+}
+
+// 4. Modify 'Tea' to 'Green Tea'
+const teaIndex = shoppingCart.indexOf('Tea');
+if (teaIndex !== -1) {
+    shoppingCart[teaIndex] = 'Green Tea';
+}
+
+// Output the final shopping cart
+console.log(shoppingCart);
+
+
+//question2
+
+// Array of student ages
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+// 1. Sort the array
+ages.sort((a, b) => a - b);  // Sorting in ascending order
+
+// 2. Find the min and max age
+const minAge = ages[0];
+const maxAge = ages[ages.length - 1];
+
+// 3. Find the median age
+let medianAge;
+const middleIndex = Math.floor(ages.length / 2);
+
+if (ages.length % 2 === 0) {
+    // If even number of elements, average the two middle values
+    medianAge = (ages[middleIndex - 1] + ages[middleIndex]) / 2;
+} else {
+    // If odd number of elements, take the middle element
+    medianAge = ages[middleIndex];
+}
+
+// 4. Find the average age
+const totalAge = ages.reduce((sum, age) => sum + age, 0);
+const averageAge = totalAge / ages.length;
+
+// 5. Find the range of the ages (max - min)
+const ageRange = maxAge - minAge;
+
+// 6. Compare the value of (min - average) and (max - average) using abs()
+const minMinusAverage = Math.abs(minAge - averageAge);
+const maxMinusAverage = Math.abs(maxAge - averageAge);
+
+// Output the results
+console.log("Sorted Ages:", ages);
+console.log("Min Age:", minAge);
+console.log("Max Age:", maxAge);
+console.log("Median Age:", medianAge);
+console.log("Average Age:", averageAge);
+console.log("Age Range:", ageRange);
+console.log("Difference (Min - Average):", minMinusAverage);
+console.log("Difference (Max - Average):", maxMinusAverage);
+
+//question3
+
+// a) Create a student object and prevent further additions of properties
+const student = {
+    name: 'John',
+    age: 20
+};
+
+Object.preventExtensions(student);
+
+// b) Check if the student object is extensible
+const extensibleStatus = Object.isExtensible(student);
+
+// c) Create a new teacher object with a 'subject' property
+const teacher = {
+    subject: 'Math'
+};
+
+// d) Seal the teacher object, preventing any additions or deletions of properties
+Object.seal(teacher);
+
+// e) Check if the teacher object is sealed
+const sealedStatus = Object.isSealed(teacher);
+
+// f) Print the extensibleStatus and sealedStatus to the console
+console.log("Is student object extensible?", extensibleStatus); // false
+console.log("Is teacher object sealed?", sealedStatus); // true
+
+//question4
+
+// Initial array of students
+let students = [
+    { id: 1, firstName: 'John', lastName: 'Doe', age: 20, grade: 'A' },
+    { id: 2, firstName: 'Jane', lastName: 'Smith', age: 22, grade: 'B' },
+    { id: 3, firstName: 'Emily', lastName: 'Johnson', age: 19, grade: 'C' }
+];
+
+// Function to display all students
+function displayStudents() {
+    if (students.length === 0) {
+        console.log('No students found.');
+    } else {
+        students.forEach(student => {
+            console.log(`ID: ${student.id}, Name: ${student.firstName} ${student.lastName}, Age: ${student.age}, Grade: ${student.grade}`);
+        });
+    }
+}
+
+// Function to add a student
+function addStudent(id, firstName, lastName, age, grade) {
+    const newStudent = { id, firstName, lastName, age, grade };
+    students.push(newStudent);
+    console.log(`Student ${firstName} ${lastName} added successfully.`);
+}
+
+// Function to update a student's information by id
+function updateStudent(id, updatedInfo) {
+    const student = students.find(student => student.id === id);
+    if (student) {
+        Object.assign(student, updatedInfo);
+        console.log(`Student with ID ${id} updated successfully.`);
+    } else {
+        console.log('Student not found.');
+    }
+}
+
+// Function to delete a student by id
+function deleteStudent(id) {
+    const studentIndex = students.findIndex(student => student.id === id);
+    if (studentIndex !== -1) {
+        students.splice(studentIndex, 1);
+        console.log(`Student with ID ${id} deleted successfully.`);
+    } else {
+        console.log('Student not found.');
+    }
+}
+
+// Example usage:
+displayStudents(); // Display all students
+addStudent(4, 'Michael', 'Brown', 21, 'B'); // Add new student
+updateStudent(2, { firstName: 'Janet', grade: 'A' }); // Update student information
+deleteStudent(3); // Delete student with id 3
+displayStudents(); // Display updated list of students
 
