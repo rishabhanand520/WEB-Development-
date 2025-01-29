@@ -1,1 +1,124 @@
+//question1
+function outerFunction(outerParameter) {
+    // Declare a variable inside outerFunction
+    const outerVariable = "I'm inside the outer function";
+
+    // The inner function that accesses both the outer parameter and the outer variable
+    return function innerFunction() {
+        console.log("Outer parameter:", outerParameter);  // Accesses the parameter of outerFunction
+        console.log("Outer variable:", outerVariable);    // Accesses the variable declared in outerFunction
+    };
+}
+
+// Create an instance of innerFunction by calling outerFunction with a parameter
+const myInnerFunction = outerFunction("Hello from outer function!");
+
+// Execute the inner function
+myInnerFunction();  // Output will still include access to outerParameter and outerVariable
+
+//question2
+
+
+// Function that checks if the regex pattern matches the string
+function checkMatch(pattern, str) {
+    const regex = new RegExp(pattern);  // Create a RegExp object using the pattern
+    return regex.test(str);  // Use the test() method to check for a match
+}
+
+// Test the function with different regex patterns and strings
+
+console.log(checkMatch("\\d{3}-\\d{2}-\\d{4}", "123-45-6789")); // true: matches a Social Security Number format
+console.log(checkMatch("\\bhello\\b", "hello world"));           // true: matches the word "hello"
+console.log(checkMatch("\\d+", "12345"));                       // true: matches any number
+console.log(checkMatch("\\bcat\\b", "the cat sat"));            // true: matches the word "cat"
+console.log(checkMatch("\\w+@\\w+\\.com", "user@example.com")); // true: matches an email pattern
+console.log(checkMatch("\\d{4}", "12345"));                     // false: does not match 4 digits
+console.log(checkMatch("\\bdog\\b", "the doghouse"));           // false: "dog" is not a standalone word
+
+//question3
+
+// Function that searches for character classes in the given string
+function searchCharacterClasses(pattern, str) {
+    const regex = new RegExp(pattern, 'g');  // Create a RegExp object with global search flag
+    return str.match(regex);  // Use the match() method to find all matches in the string
+}
+
+// Test the function with different character class patterns
+
+// Pattern for digits: \\d matches any digit (0-9)
+console.log(searchCharacterClasses("\\d", "My phone number is 12345.")); // Output: ['1', '2', '3', '4', '5']
+
+// Pattern for uppercase letters: \\p{Lu} matches any uppercase letter (Unicode property escape)
+console.log(searchCharacterClasses("[A-Z]", "Hello World!"));           // Output: ['H', 'W']
+
+// Pattern for lowercase letters: \\p{Ll} matches any lowercase letter (Unicode property escape)
+console.log(searchCharacterClasses("[a-z]", "Hello World!"));           // Output: ['e', 'l', 'l', 'o', 'o', 'r', 'l', 'd']
+
+// Pattern for special characters (non-alphanumeric): [^a-zA-Z0-9] matches anything that is not a letter or digit
+console.log(searchCharacterClasses("[^a-zA-Z0-9]", "Hello!@ World#"));   // Output: ['!', '@', '#']
+
+//question4
+
+
+// Function that checks if the pattern matches and extracts specific groups from the string
+function extractDateParts(pattern, str) {
+    const regex = new RegExp(pattern);  // Create a RegExp object
+    const match = str.match(regex);     // Use the match() method to find the match
+
+    if (match) {
+        return {
+            day: match[1],     // Extracted day (group 1)
+            month: match[2],   // Extracted month (group 2)
+            year: match[3]     // Extracted year (group 3)
+        };
+    } else {
+        return null;  // Return null if no match is found
+    }
+}
+
+// Test the function with a date pattern
+const datePattern = "(\\d{2})-(\\d{2})-(\\d{4})";  // Pattern to match "DD-MM-YYYY"
+const testString = "Today's date is 12-05-2025.";
+
+// Test the function
+const dateParts = extractDateParts(datePattern, testString);
+
+if (dateParts) {
+    console.log("Day:", dateParts.day);       // Output: Day: 12
+    console.log("Month:", dateParts.month);   // Output: Month: 05
+    console.log("Year:", dateParts.year);     // Output: Year: 2025
+} else {
+    console.log("No date match found.");
+}
+
+//question5
+
+
+// Function to calculate and print estimated delivery time based on package type
+function getDeliveryTime(packageType) {
+    let deliveryTime;
+
+    switch (packageType.toLowerCase()) {
+        case 'standard':
+            deliveryTime = '3-5 days';
+            break;
+        case 'express':
+            deliveryTime = '1-2 days';
+            break;
+        case 'overnight':
+            deliveryTime = 'Next day';
+            break;
+        default:
+            deliveryTime = 'Invalid package type. Please choose "standard", "express", or "overnight".';
+            break;
+    }
+
+    console.log(`Estimated delivery time for ${packageType} package: ${deliveryTime}`);
+}
+
+// Test the function with different package types
+getDeliveryTime('standard');   // Output: Estimated delivery time for standard package: 3-5 days
+getDeliveryTime('express');    // Output: Estimated delivery time for express package: 1-2 days
+getDeliveryTime('overnight');  // Output: Estimated delivery time for overnight package: Next day
+getDeliveryTime('economy');    // Output: Estimated delivery time for economy package: Invalid package type. Please choose "standard", "express", or "overnight".
 
