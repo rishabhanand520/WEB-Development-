@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Styling Example</title>
+    <style>
+        /* Block: .content */
+        .content {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Element: .content__paragraph */
+        .content__paragraph {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* Modifier: .content__paragraph--highlighted */
+        .content__paragraph--highlighted {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        /* Modifier: .content__paragraph--italic */
+        .content__paragraph--italic {
+            font-style: italic;
+        }
+
+        /* Modifier: .content__paragraph--large */
+        .content__paragraph--large {
+            font-size: 18px;
+        }
+
+        /* Modifier: .content__paragraph--small */
+        .content__paragraph--small {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <p class="content__paragraph">This is a normal paragraph with the base styling.</p>
+        <p class="content__paragraph content__paragraph--highlighted">This paragraph has a highlighted background and bold text.</p>
+        <p class="content__paragraph content__paragraph--italic">This paragraph is italicized.</p>
+        <p class="content__paragraph content__paragraph--large">This paragraph has larger text.</p>
+        <p class="content__paragraph content__paragraph--small">This paragraph has smaller text.</p>
+    </div>
+
+</body>
+</html>
